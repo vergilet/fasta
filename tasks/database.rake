@@ -6,7 +6,7 @@ namespace :db do
   puts "Processing task in #{env} environment."
 
   $db_hash = begin
-               YAML.safe_load(File.read('config/database.yml'))[env]
+               YAML.load(File.read('config/database.yml'))[env]
              rescue StandardError
                {}
              end

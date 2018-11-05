@@ -18,7 +18,7 @@ request_log_file = begin
 $logger = ::Logger.new(request_log_file)
 $logger.level = Logger::INFO
 
-$db_hash = YAML.safe_load(ERB.new(File.read(File.join('config', 'database.yml'))).result)[ENV.fetch('RACK_ENV', 'development')]
+$db_hash = YAML.load(ERB.new(File.read(File.join('config', 'database.yml'))).result)[ENV.fetch('RACK_ENV', 'development')]
 $database = Sequel.connect($db_hash.merge(logger: ::Logger.new(db_log_file)))
 
 module Fasta
