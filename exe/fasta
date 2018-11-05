@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/fasta/cli'
+Fasta::Installer.start(ARGV)
+begin
+  require 'fasta'
+rescue StandardError
+  0
+end

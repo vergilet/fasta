@@ -1,0 +1,2 @@
+spec = Gem::Specification.find_by_name 'fasta'
+load "#{spec.gem_dir}/tasks/database.rake"
