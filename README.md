@@ -15,6 +15,10 @@ Fasta is a mini web framework
  $ fasta plz NEW_APP_NAME
 ```
 
+```bash
+ $ cd NEW_APP_NAME
+```
+
 ## Start
 
 ```bash
