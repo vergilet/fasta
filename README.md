@@ -15,6 +15,12 @@ Fasta is a mini web framework
  $ fasta plz NEW_APP_NAME
 ```
 
+## Start
+
+```ruby
+ $ puma boot.ru -e production -p 3210
+```
+
 ## Usage
 
 TODO: Write usage instructions here
