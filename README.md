@@ -7,17 +7,17 @@ Fasta is a mini web framework
 
 ## Installation
 
-```ruby
+```bash
  $ gem install fasta
 ```
 
-```ruby
+```bash
  $ fasta plz NEW_APP_NAME
 ```
 
 ## Start
 
-```ruby
+```bash
  $ puma boot.ru -e production -p 3210
 ```
 
