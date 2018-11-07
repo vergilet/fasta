@@ -21,8 +21,10 @@ module Fasta
     end
 
     desc 'go', 'Start your application very fast!'
+    method_option :environment, default: 'development', aliases: "-e"
+    method_option :port, default: '3210', aliases: "-p"
     def go
-      exec("puma boot.ru -e production -p 3210")
+      exec("puma boot.ru -e #{options[:environment]} -p #{options[:port]}")
     end
   end
 end
