@@ -22,7 +22,7 @@ Fasta is a mini web framework
 ## Start
 
 ```bash
- $ fasta go
+ $ fasta go [-e ENVIRONMENT] [-p PORT]
 ```
 
 or advanced
