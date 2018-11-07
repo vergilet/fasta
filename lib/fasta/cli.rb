@@ -19,5 +19,10 @@ module Fasta
       copy_file 'Procfile', "#{name}/Procfile"
       copy_file 'Rakefile', "#{name}/Rakefile"
     end
+
+    desc 'go', 'Start your application very fast!'
+    def go
+      exec("puma boot.ru -e production -p 3210")
+    end
   end
 end
