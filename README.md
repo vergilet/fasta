@@ -22,6 +22,11 @@ Fasta is a mini web framework
 ## Start
 
 ```bash
+ $ fasta go
+```
+
+or advanced
+```bash
  $ puma boot.ru -e production -p 3210
 ```
 
