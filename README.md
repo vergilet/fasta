@@ -30,7 +30,29 @@ or advanced
  $ puma boot.ru -e production -p 3210
 ```
 
+## Add Endpoint
+
+```bash
+ $ fasta endpoint <ENDPOINT_NAME> <ACTION> <ACTION> <ACTION> ...
+```
+
+After generate endpoint add the appropriate routes in route.rb and extend a migration with needed fields:
+
+```ruby
+ # routes.rb
+
+ $router = Fasta::Router.new do |mapper|
+   ...
+   mapper.reg(:<METHOD>, '/<PATH>', <ENDPOINT>::<ACTION>)  # mapper.reg(:get, '/accounts', Account::Index)
+   ...
+ end  
+```
+
 ## Usage
 
-TODO: Write usage instructions here
+TODO: 
+1. Write usage instructions here
+2. DB connect/close on each request
+3. Show and Index considering
+
 
