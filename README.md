@@ -126,7 +126,4 @@ Also after set up migration file run:
 
 TODO: 
 1. Write usage instructions here
-2. DB connect/close on each request
-3. Show and Index considering
-
-
+2. Show and Index considering
