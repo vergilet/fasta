@@ -21,6 +21,11 @@ Fasta is a mini web framework
 
 ## Start
 
+Before first start run
+```bash
+ $ rake db:create
+```
+
 ```bash
  $ fasta go [-e ENVIRONMENT] [-p PORT]
 ```
@@ -33,7 +38,7 @@ or advanced
 ## Add Endpoint
 
 ```bash
- $ fasta endpoint <ENDPOINT_NAME> <ACTION> <ACTION> <ACTION> ...
+ $ fasta endpoint <ENDPOINT_NAME> <ACTION> <ACTION> <ACTION> ... # fasta endpoint account index show custom
 ```
 
 After generate endpoint add the appropriate routes in **routes.rb** and extend a migration with needed fields:
@@ -47,6 +52,13 @@ After generate endpoint add the appropriate routes in **routes.rb** and extend a
    ...
  end  
 ```
+
+Also after set up migration file run:
+
+```bash
+ $ rake db:migrate
+```
+
 
 ## Usage
 
