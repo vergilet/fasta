@@ -26,6 +26,7 @@ Before first start run
  $ rake db:create
 ```
 
+To start server:
 ```bash
  $ fasta go [-e ENVIRONMENT] [-p PORT]
 ```
