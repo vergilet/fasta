@@ -61,6 +61,67 @@ Also after set up migration file run:
 ```
 
 
+## Associated Entities
+
+```ruby
+    # app/endpoints/user/boards.rb
+
+    module User
+      class Boards < Model::Show
+        validate_fields :id
+        
+        def fetch
+          user_id = params[:id]
+          through = DB[:users_boards].where(user_id: user_id)
+          DB[:boards].where(id: through.select(:board_id)).to_a
+        end
+      end
+    end
+
+```
+
+```ruby
+    # routes.rb
+    $router = Fasta::Router.new do |mapper|
+      ...
+      mapper.reg(:get, '/users/:id/boards', User::Boards) 
+      ...
+    end
+```
+
+### Namespaces
+
+```ruby
+    # app/endpoints/team/user.rb
+    
+    module Team
+      module User
+        extend Model
+      end
+    end
+ 
+```
+
+```ruby
+    # app/endpoints/team/user/index.rb
+    
+    module Team
+      module User
+        class Index < Model::Index; end
+      end
+    end 
+
+```
+
+```ruby
+    # routes.rb
+    $router = Fasta::Router.new do |mapper|
+      ...
+      mapper.reg(:get, 'team/users', Team::User::Index)
+      ...
+    end  
+```
+
 ## Usage
 
 TODO: 
