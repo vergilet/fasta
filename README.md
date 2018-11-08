@@ -36,7 +36,7 @@ or advanced
  $ fasta endpoint <ENDPOINT_NAME> <ACTION> <ACTION> <ACTION> ...
 ```
 
-After generate endpoint add the appropriate routes in route.rb and extend a migration with needed fields:
+After generate endpoint add the appropriate routes in **routes.rb** and extend a migration with needed fields:
 
 ```ruby
  # routes.rb
