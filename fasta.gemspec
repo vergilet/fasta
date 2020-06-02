@@ -32,17 +32,17 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'hanami-router', '~> 1.3'
-  spec.add_dependency 'logger', '~> 1.0'
-  spec.add_dependency 'oj', '~> 3.6'
-  spec.add_dependency 'pg', '~> 1.0'
-  spec.add_dependency 'rack', '~> 2.0'
-  spec.add_dependency 'sequel', '~> 5.0'
-  spec.add_dependency 'thor', '~> 0.20'
+  spec.add_dependency 'hanami-router', '~> 2.0.0.alpha3'
+  spec.add_dependency 'logger', '~> 1'
+  spec.add_dependency 'oj', '~> 3'
+  spec.add_dependency 'pg', '~> 1'
+  spec.add_dependency 'rack', '~> 2'
+  spec.add_dependency 'sequel', '~> 5'
+  spec.add_dependency 'thor', '~> 1'
 
-  spec.add_dependency 'puma', '~>3.0'
+  spec.add_dependency 'puma', '~> 4'
 
-  spec.add_development_dependency 'bundler', '~> 1.17'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'bundler', '~> 2.1'
+  spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 end
