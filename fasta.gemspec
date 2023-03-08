@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'logger', '~> 1'
   spec.add_dependency 'oj', '~> 3'
   spec.add_dependency 'pg', '~> 1'
-  spec.add_dependency 'rack', '~> 2'
+  spec.add_dependency 'rack', '>= 2', '< 4'
   spec.add_dependency 'sequel', '~> 5'
   spec.add_dependency 'thor', '~> 1'
 
